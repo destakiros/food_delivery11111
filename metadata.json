@@ -1,0 +1,7 @@
+{
+  "name": "In N Out Online Food Delivery System",
+  "description": "A comprehensive online food ordering and delivery system featuring customer and admin portals, real-time order status tracking, and intuitive menu management.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
