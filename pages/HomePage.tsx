@@ -2,12 +2,14 @@
 import React from 'react';
 
 interface HomePageProps {
-  onStart: () => void;
+  onLogin: () => void;
+  onRegister: () => void;
   onViewTray?: () => void;
 }
 
-export const HomePage: React.FC<HomePageProps> = ({ onStart, onViewTray }) => (
+export const HomePage: React.FC<HomePageProps> = ({ onLogin, onRegister, onViewTray }) => (
   <div className="relative bg-white dark:bg-zinc-950 overflow-hidden min-h-screen flex flex-col items-center justify-center animate-fade-in">
+    {/* Dynamic Hero Visuals */}
     <div className="absolute inset-0 z-0 overflow-hidden">
       <img 
         src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&q=80&w=2000" 
@@ -15,11 +17,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onStart, onViewTray }) => (
         alt="Kitchen Showreel" 
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-white dark:to-zinc-950"></div>
+      
+      {/* Decorative Orbs */}
       <div className="absolute top-[20%] left-[10%] w-96 h-96 bg-ino-red/20 rounded-full blur-[120px] animate-pulse"></div>
       <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-ino-yellow/10 rounded-full blur-[120px] animate-pulse-slow"></div>
     </div>
 
     <div className="max-w-7xl mx-auto px-6 text-center relative z-10 py-24 md:py-32">
+      {/* System Status Badge */}
       <div className="inline-flex items-center gap-4 px-8 py-3.5 rounded-full bg-white/10 backdrop-blur-2xl border border-white/20 mb-12 animate-bounce-subtle shadow-2xl">
         <div className="flex gap-1.5">
           <span className="h-2.5 w-2.5 rounded-full bg-ino-red animate-ping"></span>
@@ -39,6 +44,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onStart, onViewTray }) => (
         FRESH BURGERS • STONE PIZZAS • ARTISAN SHAKES
       </p>
 
+      {/* Showcase Section */}
       <div className="flex flex-wrap justify-center gap-10 md:gap-20 mb-20 animate-fade-in delay-200">
         {[
           { img: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&q=80&w=400", label: "Gourmet Burgers" },
@@ -55,22 +61,30 @@ export const HomePage: React.FC<HomePageProps> = ({ onStart, onViewTray }) => (
         ))}
       </div>
       
-      <div className="flex flex-col sm:flex-row gap-10 justify-center items-center">
+      <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
         <button 
-          onClick={onStart} 
-          className="group relative bg-ino-red text-white text-lg px-20 py-8 rounded-[40px] font-black tracking-[0.3em] hover:bg-red-700 transition-all shadow-2xl shadow-red-500/40 uppercase transform hover:-translate-y-2 active:scale-95 flex items-center gap-4"
+          onClick={onLogin} 
+          className="group relative bg-white text-gray-950 text-md px-16 py-7 rounded-[32px] font-black tracking-[0.3em] hover:bg-ino-yellow transition-all shadow-2xl uppercase transform hover:-translate-y-1 active:scale-95 flex items-center gap-4"
         >
-          Initialize Manifest
-          <i className="ph-bold ph-rocket-launch transition-transform group-hover:translate-x-2"></i>
+          Operative Login
+          <i className="ph-bold ph-sign-in transition-transform group-hover:translate-x-1"></i>
+        </button>
+
+        <button 
+          onClick={onRegister} 
+          className="group relative bg-ino-red text-white text-md px-16 py-7 rounded-[32px] font-black tracking-[0.3em] hover:bg-red-700 transition-all shadow-2xl shadow-red-500/40 uppercase transform hover:-translate-y-1 active:scale-95 flex items-center gap-4"
+        >
+          New Enlistment
+          <i className="ph-bold ph-user-plus transition-transform group-hover:scale-110"></i>
         </button>
         
         <button 
           onClick={onViewTray} 
-          className="px-12 py-8 rounded-[40px] font-black tracking-[0.3em] text-white bg-white/5 backdrop-blur-3xl border-2 border-white/20 hover:border-ino-yellow/50 transition-all uppercase text-md hover:bg-white/10 active:scale-95 group"
+          className="px-12 py-7 rounded-[32px] font-black tracking-[0.3em] text-white bg-white/5 backdrop-blur-3xl border-2 border-white/20 hover:border-ino-yellow/50 transition-all uppercase text-sm hover:bg-white/10 active:scale-95 group"
         >
           <span className="flex items-center gap-3">
             <i className="ph-bold ph-tray group-hover:scale-110 transition-transform"></i>
-            Check Inventory
+            Check Tray
           </span>
         </button>
       </div>

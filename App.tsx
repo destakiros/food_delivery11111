@@ -80,9 +80,9 @@ const Router: React.FC = () => {
     if (view === 'about') return <AboutPage />;
     if (view === 'tracker' && activeOrder) return <OrderTrackerPage order={activeOrder} onBack={() => navigate('orders')} />;
     if (view === 'profile' && currentUser) return <ProfilePage onBack={() => navigate('home')} />;
-    if (view === 'login') return <Auth mode="login" setMode={(m) => setView(m as any)} onLogin={handleLogin} onRegister={() => {}} onBack={() => navigate('home')} loginError={authError} />;
-    if (view === 'register') return <Auth mode="register" setMode={(m) => setView(m as any)} onLogin={() => {}} onRegister={handleRegister} onBack={() => navigate('home')} loginError={authError} />;
-    return <HomePage onStart={() => navigate('menu')} onViewTray={() => navigate('tray')} />;
+    if (view === 'login') return <Auth mode="login" setMode={(m) => navigate(m as any)} onLogin={handleLogin} onRegister={() => {}} onBack={() => navigate('home')} loginError={authError} />;
+    if (view === 'register') return <Auth mode="register" setMode={(m) => navigate(m as any)} onLogin={() => {}} onRegister={handleRegister} onBack={() => navigate('home')} loginError={authError} />;
+    return <HomePage onLogin={() => navigate('login')} onRegister={() => navigate('register')} onViewTray={() => navigate('tray')} />;
   };
 
   return (

@@ -2,7 +2,7 @@
 import { FoodItem, FoodCategory } from './types';
 
 export const FOOD_ITEMS: FoodItem[] = [
-  // BURGERS (4 ITEMS)
+  // BURGERS
   {
     id: 'b1',
     name: 'Double-Double Burger',
@@ -20,7 +20,8 @@ export const FOOD_ITEMS: FoodItem[] = [
     price: 10.50,
     image: 'https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&q=80&w=800',
     category: 'Burger',
-    sizes: [{ name: 'Single', price: 10.50 }, { name: 'Double', price: 13.50 }]
+    sizes: [{ name: 'Single', price: 10.50 }, { name: 'Double', price: 13.50 }],
+    ingredients: ['Beef Patty', 'Bacon', 'Onion Rings', 'BBQ Sauce', 'Cheese']
   },
   {
     id: 'b3',
@@ -29,7 +30,8 @@ export const FOOD_ITEMS: FoodItem[] = [
     price: 13.50,
     image: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&q=80&w=800',
     category: 'Burger',
-    sizes: [{ name: 'Standard', price: 13.50 }]
+    sizes: [{ name: 'Standard', price: 13.50 }],
+    ingredients: ['Beef Patty', 'Cheese', 'Spread', 'Onions', 'Lettuce']
   },
   {
     id: 'b4',
@@ -38,10 +40,11 @@ export const FOOD_ITEMS: FoodItem[] = [
     price: 9.75,
     image: 'https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?auto=format&fit=crop&q=80&w=800',
     category: 'Burger',
-    sizes: [{ name: 'Single', price: 9.75 }, { name: 'Double', price: 12.75 }]
+    sizes: [{ name: 'Single', price: 9.75 }, { name: 'Double', price: 12.75 }],
+    ingredients: ['Beef Patty', 'Mushrooms', 'Swiss Cheese', 'Mayo', 'Onions']
   },
 
-  // PIZZAS (4 ITEMS)
+  // PIZZAS
   {
     id: 'p1',
     name: 'Pepperoni Feast',
@@ -49,7 +52,8 @@ export const FOOD_ITEMS: FoodItem[] = [
     price: 12.99,
     image: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=800&q=80',
     category: 'Pizza',
-    sizes: [{ name: 'Small', price: 10.99 }, { name: 'Medium', price: 12.99 }, { name: 'Large', price: 18.99 }]
+    sizes: [{ name: 'Small', price: 10.99 }, { name: 'Medium', price: 12.99 }, { name: 'Large', price: 18.99 }],
+    ingredients: ['Pepperoni', 'Cheese', 'Tomato Sauce', 'Dough', 'Oregano']
   },
   {
     id: 'p2',
@@ -58,7 +62,8 @@ export const FOOD_ITEMS: FoodItem[] = [
     price: 11.50,
     image: 'https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?auto=format&fit=crop&q=80&w=800',
     category: 'Pizza',
-    sizes: [{ name: 'Small', price: 11.50 }, { name: 'Medium', price: 14.50 }, { name: 'Large', price: 19.50 }]
+    sizes: [{ name: 'Small', price: 11.50 }, { name: 'Medium', price: 14.50 }, { name: 'Large', price: 19.50 }],
+    ingredients: ['Mozzarella', 'Basil', 'Tomato Sauce', 'Olive Oil', 'Dough']
   },
   {
     id: 'p3',
@@ -67,19 +72,11 @@ export const FOOD_ITEMS: FoodItem[] = [
     price: 15.25,
     image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=800',
     category: 'Pizza',
-    sizes: [{ name: 'Medium', price: 15.25 }, { name: 'Large', price: 21.25 }]
-  },
-  {
-    id: 'p4',
-    name: 'BBQ Chicken Pizza',
-    description: 'Grilled chicken, red onions, cilantro, and BBQ sauce over bubbly mozzarella.',
-    price: 14.50,
-    image: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80&w=800',
-    category: 'Pizza',
-    sizes: [{ name: 'Medium', price: 14.50 }, { name: 'Large', price: 19.50 }]
+    sizes: [{ name: 'Medium', price: 15.25 }, { name: 'Large', price: 21.25 }],
+    ingredients: ['Olives', 'Feta', 'Sun-dried Tomato', 'Oregano', 'Cheese']
   },
 
-  // SOFT DRINKS (4 ITEMS)
+  // SOFT DRINKS
   {
     id: 'sd1',
     name: 'Coca-Cola Classic',
@@ -87,7 +84,8 @@ export const FOOD_ITEMS: FoodItem[] = [
     price: 2.50,
     image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&q=80&w=800',
     category: 'Soft Drink',
-    sizes: [{ name: 'Small', price: 2.50 }, { name: 'Medium', price: 3.50 }, { name: 'Large', price: 4.50 }]
+    sizes: [{ name: 'Small', price: 2.50 }, { name: 'Medium', price: 3.50 }, { name: 'Large', price: 4.50 }],
+    ingredients: ['Ice', 'Sugar', 'Lemon Slice']
   },
   {
     id: 'sd2',
@@ -96,28 +94,11 @@ export const FOOD_ITEMS: FoodItem[] = [
     price: 2.50,
     image: 'https://images.unsplash.com/photo-1625772290748-39126cdd9fe9?auto=format&fit=crop&q=80&w=800',
     category: 'Soft Drink',
-    sizes: [{ name: 'Small', price: 2.50 }, { name: 'Medium', price: 3.50 }, { name: 'Large', price: 4.50 }]
-  },
-  {
-    id: 'sd3',
-    name: 'Fanta Orange',
-    description: 'Bright and bubbly orange soda that bursts with fruit flavor.',
-    price: 2.50,
-    image: 'https://images.unsplash.com/photo-1624517452488-04869289c4ca?auto=format&fit=crop&q=80&w=800',
-    category: 'Soft Drink',
-    sizes: [{ name: 'Small', price: 2.50 }, { name: 'Medium', price: 3.50 }, { name: 'Large', price: 4.50 }]
-  },
-  {
-    id: 'sd4',
-    name: 'Diet Pepsi',
-    description: 'Maximum cola taste with zero sugar for the light alternative.',
-    price: 2.50,
-    image: 'https://images.unsplash.com/photo-1543253687-c931c8e01820?auto=format&fit=crop&q=80&w=800',
-    category: 'Soft Drink',
-    sizes: [{ name: 'Small', price: 2.50 }, { name: 'Medium', price: 3.50 }, { name: 'Large', price: 4.50 }]
+    sizes: [{ name: 'Small', price: 2.50 }, { name: 'Medium', price: 3.50 }, { name: 'Large', price: 4.50 }],
+    ingredients: ['Ice', 'Lemon Slice', 'Mint']
   },
 
-  // CHICKEN (4 ITEMS)
+  // CHICKEN
   {
     id: 'ch1',
     name: 'Atomic Hot Wings',
@@ -125,46 +106,11 @@ export const FOOD_ITEMS: FoodItem[] = [
     price: 12.50,
     image: 'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&q=80&w=800',
     category: 'Chicken',
-    sizes: [{ name: 'Standard (10pc)', price: 12.50 }, { name: 'Party (20pc)', price: 21.00 }]
-  },
-  {
-    id: 'ch2',
-    name: 'Crispy Strips Bucket',
-    description: '6 pieces of hand-breaded chicken breast strips with honey mustard dip.',
-    price: 10.99,
-    image: 'https://images.unsplash.com/photo-1562967914-6c827382d12c?auto=format&fit=crop&q=80&w=800',
-    category: 'Chicken',
-    sizes: [{ name: 'Regular', price: 10.99 }, { name: 'Large', price: 14.99 }]
-  },
-  {
-    id: 'ch3',
-    name: 'Roasted Fillet Plate',
-    description: 'Herb-marinated chicken breast roasted to perfection, served with vegetables.',
-    price: 13.99,
-    image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=800',
-    category: 'Chicken',
-    sizes: [{ name: 'Standard', price: 13.99 }]
-  },
-  {
-    id: 'ch4',
-    name: 'Fried Chicken Platter',
-    description: '4 pieces of southern-style fried chicken (leg, thigh, wing, breast).',
-    price: 15.50,
-    image: 'https://images.unsplash.com/photo-1516684669134-de6f7c473a2a?auto=format&fit=crop&q=80&w=800',
-    category: 'Chicken',
-    sizes: [{ name: 'Quarter', price: 15.50 }, { name: 'Half (8pc)', price: 28.00 }]
+    sizes: [{ name: 'Standard (10pc)', price: 12.50 }, { name: 'Party (20pc)', price: 21.00 }],
+    ingredients: ['Habanero Sauce', 'Blue Cheese Dip', 'Celery']
   },
 
-  // CHIPS (3 ITEMS)
-  {
-    id: 'cs1',
-    name: 'Classic Salted Chips',
-    description: 'Freshly hand-cut golden fries, lightly salted and served hot.',
-    price: 3.50,
-    image: 'https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&q=80&w=800',
-    category: 'Chips',
-    sizes: [{ name: 'Small', price: 3.50 }, { name: 'Large', price: 5.50 }]
-  },
+  // CHIPS
   {
     id: 'cs2',
     name: 'Animal Style Chips',
@@ -172,16 +118,8 @@ export const FOOD_ITEMS: FoodItem[] = [
     price: 5.99,
     image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&q=80&w=800',
     category: 'Chips',
-    sizes: [{ name: 'Standard', price: 5.99 }]
-  },
-  {
-    id: 'cs3',
-    name: 'Cheesy Loaded Chips',
-    description: 'Thick cut chips drenched in warm liquid cheddar and topped with fresh jalapeños.',
-    price: 6.50,
-    image: 'https://images.unsplash.com/photo-1581065115011-807897282772?auto=format&fit=crop&q=80&w=800',
-    category: 'Chips',
-    sizes: [{ name: 'Standard', price: 6.50 }]
+    sizes: [{ name: 'Standard', price: 5.99 }],
+    ingredients: ['Cheese', 'Secret Spread', 'Grilled Onions', 'Salt']
   }
 ];
 
